@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    background-color: brown;
+    overflow: auto;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: rgb(130, 8, 179);
+    float: left;
+}
+
+#caja3 {
+    clear: left;
+}
+
+
+
+/* Position static (posicion default) es donde tocaba la posicion ahi se queda, su posicion en los demas se reserva
+Position relativo es donde estaba en static, se mueve relativo a esta, su posicion en los demas se reserva
+Poistion absolute es de donde estaba el padre, se mueve y su posicion en el flujo se elimina, su posicion en los demas se elimina
+Fixed es en relacion al Navegador en si mismo, su posicion en la secuencia se elimina
+Con sticky se queda presente el objeto minetras se hace scroll, con relative y fixed
+Position: xpropiedad su usa junto con
+top:
+bottom:
+right:
+left:*/
