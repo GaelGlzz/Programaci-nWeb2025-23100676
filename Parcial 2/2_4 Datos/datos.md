@@ -6,7 +6,7 @@
 | **Number**       | Primitivo                      | Representa números enteros o decimales.                  | 42, 3.14                     |
 | **BigInt**       | Primitivo                      | Permite manejar números enteros muy grandes.             | 12345678901234567890n        |
 | **Boolean**      | Primitivo                      | Representa valores lógicos.                              | true, false                  |
-| **Undefined**    | Primitivo                      | Variable declarada sin valor asignado.                   | let x;` → `undefined         |
+| **Undefined**    | Primitivo                      | Variable declarada sin valor asignado.                   | let x; → undefined         |
 | **Null**         | Primitivo                      | Representa la ausencia intencional de valor.             | let y = null;                |
 | **Symbol**       | Primitivo                      | Identificador único e inmutable.                         | Symbol('id')                 |
 | **Object**       | No primitivo                   | Colección de pares clave-valor; base de casi todo en JS. | {nombre: "Gael", edad: 20}   |
