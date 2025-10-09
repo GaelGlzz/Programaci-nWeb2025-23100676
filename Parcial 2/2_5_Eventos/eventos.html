@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La importancia del internet en la sociedad</title>
+    <link rel="stylesheet" href="eventos.css">
+</head>
+
+
+<body>
+    <div class="encabezado">
+        
+        <h1 id="titulointernet">
+            La importancia del internet en la sociedad
+        </h1>
+    </div>
+<div class="contenedor"style="text-align: justify; position: relative;">
+        <div class="cuadrado-fondo"></div>
+    
+    <p>
+        El internet se ha convertido en una herramienta fundamental en la sociedad moderna, ya que ha transformado la forma en que las personas se comunican. Gracias a él, hoy es posible interactuar en tiempo real mediante redes sociales, correo electrónico, videollamadas y aplicaciones de mensajería, lo que ha reducido las barreras de distancia y tiempo entre individuos en diferentes partes del mundo.
+    </p>
+<br>
+    <p>
+        Otro aspecto esencial es el acceso a la información. El internet facilita la búsqueda de conocimientos de manera rápida y sencilla, lo cual impulsa la educación, la investigación y la innovación. Además, permite el desarrollo de la educación en línea, brindando oportunidades de aprendizaje a personas que, de otra forma, no podrían acceder a instituciones tradicionales.
+    </p>
+<br>
+    <p>
+        En el ámbito económico, el internet ha abierto nuevas posibilidades. El comercio electrónico, el teletrabajo y la economía digital han generado empleos y modelos de negocio que antes no existían. Asimismo, se ha convertido en una plataforma clave para el entretenimiento, ya que ofrece música, películas, videojuegos y redes sociales que influyen en la cultura y en la vida cotidiana.
+    </p>
+<br>
+    <p>
+        También ha fortalecido la participación social y política al dar voz a la ciudadanía. A través de plataformas digitales, las personas pueden informarse, organizarse y participar en debates públicos y en procesos democráticos. Además, el internet facilita trámites y servicios como la banca en línea, las compras digitales, la atención médica a distancia y el acceso a servicios gubernamentales.
+    </p>
+<br>
+    <p>
+        En conclusión, el internet es indispensable en la vida actual porque conecta personas, impulsa el desarrollo y reduce distancias. No obstante, también plantea retos como la ciberseguridad, la desinformación y la brecha digital, que deben ser atendidos para aprovechar todo su potencial de manera segura y equitativa.
+    </p>
+    <br>
+    <img id="imagentexto" src="https://aprendelibvrefiles.blob.core.windows.net/aprendelibvre-container/course/creacion_de_sitios_web/image/servinternet_xl.png" width="500" height="300" alt="Internet" >
+
+</div>
+<br><br>
+<br><br>
+<div class="referencias">
+    <h3>Referencias</h3>
+    <ul>
+        <li><a href="https://www.galileo.edu/idea/historias-de-exito/el-internet-su-impacto-en-la-sociedad-actual-y-las-telecomunicaciones/?utm_source=chatgpt.com">Impacto del internet en la sociedad</a></li>
+        <li><a href="https://psicologiaymente.com/psicologia/ventajas-desventajas-de-internet?utm_source=chatgpt.com">Ventajas y desventajas del internet</a></li>
+    </ul>
+</div>
+
+    <script>
+        const titulo = document.getElementById("titulointernet");
+        titulo.style.transition = 'color 0.6s ease';
+        let esRojo = false;
+
+        titulo.addEventListener("click", function() {
+            if (esRojo) {
+                titulo.style.color = "white";
+            } else {
+                titulo.style.color = "red";
+        }
+        esRojo = !esRojo;
+        });
+
+        const imagen = document.getElementById("imagentexto");
+        imagen.style.transition = 'transform 0.6s ease, filter 0.6s ease';
+        imagen.addEventListener('mouseenter', () => {
+        //imagen.style.transform = 'rotate(360deg)';
+        imagen.style.transform = 'scale(1.5)';
+        //imagen.style.filter = 'hue-rotate(180deg)';
+        });
+
+        imagen.addEventListener('mouseleave', () => {
+        //imagen.style.transform = 'rotate(0deg)';
+        imagen.style.transform = 'scale(1)';
+        //imagen.style.filter = 'hue-rotate(0deg)';
+        });
+    </script>
+</body>
+</html>
