@@ -52,28 +52,32 @@
 </div>
 
     <script>
-        const titulo = document.getElementById("titulointernet");
-        titulo.style.transition = 'color 0.6s ease';
-        let esRojo = false;
 
-        titulo.addEventListener("click", function() {
-            if (esRojo) {
-                titulo.style.color = "white";
-            } else {
-                titulo.style.color = "red";
+        window.onload = function(){
+            let titulo = document.getElementById("titulointernet");
+            titulo.style.transition = 'color 0.6s ease';
+            let esRojo = false;
+
+            titulo.addEventListener("click", function() {
+                if (esRojo) {
+                    titulo.style.color = "white";
+                } else {
+                    titulo.style.color = "red";
+                }
+                esRojo = !esRojo;
+            });
+
+            let imagen = document.getElementById("imagentexto");
+            imagen.style.transition = 'transform 0.6s ease, filter 0.6s ease';
+            imagen.addEventListener('mouseenter', () => {
+                imagen.style.transform = 'scale(1.5)';
+            });
+
+            imagen.addEventListener('mouseleave', () => {
+                imagen.style.transform = 'scale(1)';
+            });
         }
-        esRojo = !esRojo;
-        });
-
-        const imagen = document.getElementById("imagentexto");
-        imagen.style.transition = 'transform 0.6s ease, filter 0.6s ease';
-        imagen.addEventListener('mouseenter', () => {
-        imagen.style.transform = 'scale(1.5)';
-        });
-
-        imagen.addEventListener('mouseleave', () => {
-        imagen.style.transform = 'scale(1)';
-        });
+       
     </script>
 </body>
 </html>
