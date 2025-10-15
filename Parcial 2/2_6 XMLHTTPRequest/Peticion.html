@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <button id="btn">Haz click para ver un perro</button>
+        <div class="res">
+            <br><br>
+            <img id="perro" src="" width="300">
+        </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", cargarDatos);
+
+        function cargarDatos(){
+            let solicitud = new XMLHttpRequest();
+            solicitud.onload = function(){
+                let datos = JSON.parse(solicitud.response);
+                console.log(datos);
+                let urlPerro = datos.message;
+                document.getElementById("perro").src = urlPerro;
+            }
+            solicitud.open("GET", "https://dog.ceo/api/breeds/image/random", true);
+            solicitud.send();
+        }
+    </script>
+</body>
+</html>
