@@ -13,6 +13,12 @@
             <img id="perro" src="" width="300">
         </div>
 
+        <button id="btn2">Haz click para ver un gato</button>
+        <div class="res">
+            <br><br>
+            <img id="gato" src="" width="300">
+        </div>
+
     <script>
         document.getElementById("btn").addEventListener("click", cargarDatos);
 
@@ -26,6 +32,19 @@
             }
             solicitud.open("GET", "https://dog.ceo/api/breeds/image/random", true);
             solicitud.send();
+        }
+                document.getElementById("btn2").addEventListener("click", cargarGato);
+
+        function cargarGato() {
+        const options = { method: 'GET' };
+
+        fetch('https://cataas.com/cat', options) 
+        .then(response => response.blob())
+        .then(imageBlob => {
+        const imageURL = URL.createObjectURL(imageBlob);
+        document.getElementById("gato").src = imageURL;
+        })
+        .catch(err => console.error(err));
         }
     </script>
 </body>
