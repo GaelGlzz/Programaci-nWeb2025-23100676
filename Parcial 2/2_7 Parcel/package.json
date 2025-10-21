@@ -9,8 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
+    "cowsay": "^1.6.0",
     "parcel": "^2.16.0"
   }
 }
