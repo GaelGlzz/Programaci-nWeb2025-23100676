@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con dos métodos de envío</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<body>
+    <form action="https://echo.free.beeceptor.com" method="post" target="resultadoPOST" class="pure-form" id="formulario">
+        <fieldset>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br><br>
+            <button type="submit" class="pure-button pure-button-primary">Enviar al iframe</button>
+            <button type="button" id="enviarFetch" class="pure-button pure-button-secondary">Enviar con Fetch</button>
+        </fieldset>    
+    </form>
+
+    <iframe name="resultadoPOST" style="width:100%; height:200px; border:1px solid #ccc; margin-top:1rem;"></iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const formulario = document.getElementById("formulario");
+            const botonFetch = document.getElementById("enviarFetch");
+
+            // --- Método moderno con fetch ---
+            botonFetch.addEventListener("click", (e) => {
+                e.preventDefault(); // evita cualquier envío tradicional
+
+                const datosForm = new FormData(formulario);
+                const cadenaUrl = new URLSearchParams(datosForm).toString();
+
+                fetch('https://echo.free.beeceptor.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: cadenaUrl
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("respuesta:", data);
+                })
+            });
+        });
+    </script>
+</body>
+</html>

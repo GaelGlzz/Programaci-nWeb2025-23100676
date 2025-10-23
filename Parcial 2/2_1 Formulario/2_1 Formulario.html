@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="https://httpbin.org/post" method="post" target="resultadoPOST" class="pure-form">
+    <form action="https://httpbin.org/post" method="post" target="resultadoPOST" class="pure-form" id="formulario">
         <fieldset>
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre">
@@ -22,6 +22,21 @@
         </fieldset>    
     </form>
         <iframe name="resultadoPOST"></iframe>
+
+        <script>
+            const datosForm = new FormData(document.getElementById("formulario"));
+            const cadenaUrl = new URLSearchParams(datosForm).toString();
+
+            fetch('https://httpbin.org/post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: cadenaUrl
+            })
+            .then(response => response.json())
+            .then(data => console.log(data));
+        </script>
         
 </body>
 </html>
