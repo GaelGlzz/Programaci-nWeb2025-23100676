@@ -25,10 +25,8 @@
         document.addEventListener("DOMContentLoaded", () => {
             const formulario = document.getElementById("formulario");
             const botonFetch = document.getElementById("enviarFetch");
-
-            // --- Método moderno con fetch ---
             botonFetch.addEventListener("click", (e) => {
-                e.preventDefault(); // evita cualquier envío tradicional
+                e.preventDefault(); 
 
                 const datosForm = new FormData(formulario);
                 const cadenaUrl = new URLSearchParams(datosForm).toString();
